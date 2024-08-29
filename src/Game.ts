@@ -31,7 +31,7 @@ export default class Game {
     const consoleInterface = readline.createInterface(process.stdin, process.stdout)
     const candidate = parseInt(await consoleInterface.question('Enter your solution: '), 10)
     consoleInterface.close()
-    const win = await this.currentRound.play(candidate)
+    const win = this.currentRound.play(candidate)
     console.log(win ? 'Correct!' : 'Incorrect!', `Current score: ${this.score}`)
     this.startNewRound()
   }

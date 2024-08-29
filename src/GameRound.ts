@@ -15,7 +15,7 @@ export default class GameRound {
     return this._score
   }
 
-  async play(candidate: number) {
+  play(candidate: number) {
     if (!this._sequence || this.score !== 0) {
       throw new Error("Round is not initialized or already played");
     }
